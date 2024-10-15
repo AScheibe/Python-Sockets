@@ -15,6 +15,7 @@ sock.bind(('', args.port))
 
 # Function to request file chunks from a sender
 def request_file(sender_address, filename):
+    print("\n\n", sender_address)
     packet_type = b'R'  # 'R' for REQUEST packet
     seq_no = 0  # Sequence number for REQUEST packet is set to 0
     payload_length = 0  # No payload length for REQUEST packet
